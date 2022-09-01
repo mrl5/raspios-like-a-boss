@@ -183,8 +183,8 @@ sudo systemctl disable bluetooth
 
 Remove not needed features from `/boot/config.txt`:
 ```diff
---- config.txt	2022-09-01 16:16:02.000000000 +0200
-+++ config.txt	2022-09-01 16:18:10.000000000 +0200
+--- /boot/config.txt	2022-09-01 16:16:02.000000000 +0200
++++ /boot/config.txt	2022-09-01 16:18:10.000000000 +0200
 @@ -50,10 +50,10 @@
  # Additional overlays and parameters are documented /boot/overlays/README
  
@@ -229,7 +229,7 @@ sudo apt-get install unattended-upgrades apt-listchanges apticron
 ```
 ```diff
 --- /etc/apt/apt.conf.d/50unattended-upgrades	2021-02-19 13:11:42.000000000 +0100
-+++ /etc/apt/apt.conf.d/50unattended-upgrades.new	2022-09-01 16:51:30.027878341 +0200
++++ /etc/apt/apt.conf.d/50unattended-upgrades	2022-09-01 16:51:30.027878341 +0200
 @@ -91,7 +91,7 @@
  // If empty or unset then no email is sent, make sure that you
  // have a working mail setup on your system. A package that provides
@@ -242,7 +242,7 @@ sudo apt-get install unattended-upgrades apt-listchanges apticron
 ```
 ```diff
 --- /dev/null	2022-09-01 16:44:19.491999997 +0200
-+++ 02periodic	2022-09-01 16:54:59.446369891 +0200
++++ /etc/apt/apt.conf.d/02periodic	2022-09-01 16:54:59.446369891 +0200
 @@ -0,0 +1,6 @@
 +APT::Periodic::Enable "1";
 +APT::Periodic::Update-Package-Lists "1";
@@ -271,7 +271,7 @@ there is no such option then:
 
 Mount `/tmp` as `tmpfs`. Edit `/etc/fstab`
 ```diff
---- /etc/fstab.old	2022-09-01 03:07:44.950381093 +0200
+--- /etc/fstab	2022-09-01 03:07:44.950381093 +0200
 +++ /etc/fstab	2022-09-01 03:08:18.561897623 +0200
 @@ -3,3 +3,5 @@
  PARTUUID=6df8a8fc-02  /               ext4    defaults,noatime  0       1
