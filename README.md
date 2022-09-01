@@ -2,6 +2,19 @@
 
 ![like a boss](https://as2.ftcdn.net/v2/jpg/02/25/53/75/500_F_225537518_9UhVyvJ9Za8uKIyosc3Mboonj6nGVE5V.jpg)
 
+## Content
+
+* [Download](#download)
+* [Ensure checksum and unpack](#ensure-checksum-and-unpack)
+* [Transfer to MMC](#transfer-to-mmc)
+* [(optional) Mount filesystem](#optional-mount-filesystem)
+* [Plug in Raspberry Pi](#plug-in-raspberry-pi)
+* [SSH + basic security](#ssh--basic-security)
+* [Additional configuration](#additional-configuration)
+* [More on security hardening](#more-on-security-hardening)
+* [Save the lifetime of your MMC](#save-the-lifetime-of-your-mmc)
+* [Print server](#print-server)
+
 
 ## Download
 
