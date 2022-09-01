@@ -241,3 +241,29 @@ sudo apt-get install unattended-upgrades apt-listchanges apticron
 ```console
 sudo unattended-upgrades -d
 ```
+
+## More on security hardening
+
+* https://raspberrytips.com/security-tips-raspberry-pi/
+* https://chrisapproved.com/blog/raspberry-pi-hardening.html
+
+
+## Save the lifetime of your MMC
+
+Well, the best solution would be to use some external storage (like USB HDD) and mount it as `/var` but if
+there is no such option then:
+* https://github.com/azlux/log2ram
+* https://hackaday.com/2019/04/08/give-your-raspberry-pi-sd-card-a-break-log-to-ram/
+* https://linuxhint.com/improve-sd-card-lifespan-log2ram-raspberry-pi/
+
+Mount `/tmp` as `tmpfs`. Edit `/etc/fstab`
+```diff
+--- /etc/fstab.old	2022-09-01 03:07:44.950381093 +0200
++++ /etc/fstab	2022-09-01 03:08:18.561897623 +0200
+@@ -3,3 +3,5 @@
+ PARTUUID=6df8a8fc-02  /               ext4    defaults,noatime  0       1
+ # a swapfile is not a swap partition, no line here
+ #   use  dphys-swapfile swap[on|off]  for that
++
++tmpfs	/tmp	tmpfs	defaults,nodev,noexec,nosuid,size=100M  0 0
+```
