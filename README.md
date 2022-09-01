@@ -267,3 +267,28 @@ Mount `/tmp` as `tmpfs`. Edit `/etc/fstab`
 +
 +tmpfs	/tmp	tmpfs	defaults,nodev,noexec,nosuid,size=100M  0 0
 ```
+
+
+## Print server
+
+`CUPS` or `p910nd`
+
+```console
+sudo dmesg | grep printer
+sudo apt-get install p910nd
+```
+```diff
+--- /etc/default/p910nd	2022-09-01 17:09:11.024979923 +0200
++++ /etc/default/p910nd	2022-09-01 17:09:11.024979923 +0200
+@@ -1,8 +1,8 @@
+ # Printer number, if not 0
+ P910ND_NUM=""
+ # Additional daemon arguments, see man 8 p910nd
+-P910ND_OPTS=""
++P910ND_OPTS="-f /dev/usb/lp0"
+ 
+ 
+ # Debian specific (set to 1 to enable start by default)
+-P910ND_START=0
++P910ND_START=1
+```
