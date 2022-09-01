@@ -208,4 +208,36 @@ sudo reboot
 ```
 
 
+## Additional configuration
 
+SSH into your rpi and lets setup unattended upgrades
+```console
+sudo apt-get install unattended-upgrades apt-listchanges apticron
+```
+```diff
+--- /etc/apt/apt.conf.d/50unattended-upgrades	2021-02-19 13:11:42.000000000 +0100
++++ /etc/apt/apt.conf.d/50unattended-upgrades.new	2022-09-01 16:51:30.027878341 +0200
+@@ -91,7 +91,7 @@
+ // If empty or unset then no email is sent, make sure that you
+ // have a working mail setup on your system. A package that provides
+ // 'mailx' must be installed. E.g. "user@example.com"
+-//Unattended-Upgrade::Mail "";
++Unattended-Upgrade::Mail "root";
+ 
+ // Set this value to one of:
+ //    "always", "only-on-error" or "on-change"
+```
+```diff
+--- /dev/null	2022-09-01 16:44:19.491999997 +0200
++++ 02periodic	2022-09-01 16:54:59.446369891 +0200
+@@ -0,0 +1,6 @@
++APT::Periodic::Enable "1";
++APT::Periodic::Update-Package-Lists "1";
++APT::Periodic::Download-Upgradeable-Packages "1";
++APT::Periodic::Unattended-Upgrade "1";
++APT::Periodic::AutocleanInterval "1";
++APT::Periodic::Verbose "2";
+```
+```console
+sudo unattended-upgrades -d
+```
