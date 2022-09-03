@@ -270,18 +270,6 @@ there is no such option then:
 * https://hackaday.com/2019/04/08/give-your-raspberry-pi-sd-card-a-break-log-to-ram/
 * https://linuxhint.com/improve-sd-card-lifespan-log2ram-raspberry-pi/
 
-Mount `/tmp` as `tmpfs`. Edit `/etc/fstab`
-```diff
---- /etc/fstab	2022-09-01 03:07:44.950381093 +0200
-+++ /etc/fstab	2022-09-01 03:08:18.561897623 +0200
-@@ -3,3 +3,5 @@
- PARTUUID=6df8a8fc-02  /               ext4    defaults,noatime  0       1
- # a swapfile is not a swap partition, no line here
- #   use  dphys-swapfile swap[on|off]  for that
-+
-+tmpfs	/tmp	tmpfs	defaults,nodev,noexec,nosuid,size=100M  0 0
-```
-
 
 ## Print server
 
