@@ -301,8 +301,8 @@ based on
 https://www.jeffgeerling.com/blog/2021/htgwa-create-zfs-raidz1-zpool-on-raspberry-pi
 
 ```console
-sudo apt install raspberrypi-kernel-headers
-sudo apt install zfs-dkms zfsutils-linux
+sudo apt-get upgrade raspberrypi-kernel raspberrypi-kernel-headers
+sudo apt-get install zfs-dkms zfsutils-linux
 ```
 
 first compilation on rpi
