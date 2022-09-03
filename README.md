@@ -11,10 +11,10 @@
 * [Plug in Raspberry Pi](#plug-in-raspberry-pi)
 * [SSH + basic security](#ssh--basic-security)
 * [Additional configuration](#additional-configuration)
-* [More on security hardening](#more-on-security-hardening)
-* [Save the lifetime of your MMC](#save-the-lifetime-of-your-mmc)
-* [Print server](#print-server)
-* [OpenZFS](#openzfs)
+* [(optional) More on security hardening](#optional-more-on-security-hardening)
+* [(optional) Save the lifetime of your MMC](#optional-save-the-lifetime-of-your-mmc)
+* [(optional) Print server](#optional-print-server)
+* [(optional) OpenZFS](#optional-openzfs)
 
 
 ## Download
@@ -256,13 +256,13 @@ sudo apt-get install unattended-upgrades apt-listchanges apticron
 sudo unattended-upgrades -d
 ```
 
-## More on security hardening
+## (optional) More on security hardening
 
 * https://raspberrytips.com/security-tips-raspberry-pi/
 * https://chrisapproved.com/blog/raspberry-pi-hardening.html
 
 
-## Save the lifetime of your MMC
+## (optional) Save the lifetime of your MMC
 
 Well, the best solution would be to use some external storage (like USB HDD) and mount it as `/var` but if
 there is no such option then:
@@ -271,7 +271,7 @@ there is no such option then:
 * https://linuxhint.com/improve-sd-card-lifespan-log2ram-raspberry-pi/
 
 
-## Print server
+## (optional) Print server
 
 `CUPS` or `p910nd`
 
@@ -295,7 +295,7 @@ sudo apt-get install p910nd
 +P910ND_START=1
 ```
 
-## OpenZFS
+## (optional) OpenZFS
 
 based on
 https://www.jeffgeerling.com/blog/2021/htgwa-create-zfs-raidz1-zpool-on-raspberry-pi
