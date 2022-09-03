@@ -14,6 +14,7 @@
 * [More on security hardening](#more-on-security-hardening)
 * [Save the lifetime of your MMC](#save-the-lifetime-of-your-mmc)
 * [Print server](#print-server)
+* [OpenZFS](#openzfs)
 
 
 ## Download
@@ -305,3 +306,16 @@ sudo apt-get install p910nd
 -P910ND_START=0
 +P910ND_START=1
 ```
+
+## OpenZFS
+
+based on
+https://www.jeffgeerling.com/blog/2021/htgwa-create-zfs-raidz1-zpool-on-raspberry-pi
+
+```console
+sudo apt install raspberrypi-kernel-headers
+sudo apt install zfs-dkms zfsutils-linux
+```
+
+first compilation on rpi
+![daaamn](https://c.tenor.com/V9BrdR50OiMAAAAd/daaamn.gif)
