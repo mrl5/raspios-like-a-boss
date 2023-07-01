@@ -168,8 +168,8 @@ sudo visudo /etc/sudoers.d/010_pi-nopasswd
 --- /etc/sudoers.d/010_pi-nopasswd  2022-09-01 01:50:50.160023746 +0100
 +++ /etc/sudoers.d/010_pi-nopasswd  2022-09-01 01:50:50.160023746 +0100
 @@ -1 +1 @@
--#your_user ALL=(ALL) NOPASSWD: ALL
-+your_user ALL=(ALL) NOPASSWD: ALL
+-your_user ALL=(ALL) NOPASSWD: ALL
++#your_user ALL=(ALL) NOPASSWD: ALL
 ```
 
 Disable logins by password
